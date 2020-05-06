@@ -1,9 +1,5 @@
-# wtf-gulp-starter
+# Simple editor
 
-`npm install -g gulp-cli`
+`edytor pozwalający na zapisywanie i wczytywanie tekstu po np. po odświeżeniu`
 
-`npm install`
 
-`gulp`
-
-To publish your page using github pages use `npm run deploy`
