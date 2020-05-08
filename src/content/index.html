@@ -9,26 +9,22 @@
 </head>
 
 <body>
-  <main>
-    <h1 class="header">
-      Simple Editor
-    </h1>
-    <form>
-      <label class="label" for="textarea">Please enter text</label>
-      <textarea class="textarea textarea--js" name="textarea" placeholder="..."></textarea>
-    </form>
-    <div class="button__layout">
-      <div class="button">
-        <button class="button__text button__load--js">
+  <main class="main">
+    <h1 class="header">Simple Editor</h1>
+    <form class="form">
+      <p>
+        <label class="form__label" for="textarea">Please enter text</label>
+        <textarea class="form__textarea form__textarea--js" id="textarea" placeholder="..."></textarea>
+      </p>
+      <div class="form__action">
+        <button class="form__button form__button--load form__button--load-js">
           load
         </button>
-      </div>
-      <div class="button">
-        <button class="button__text button__save--js">
+        <button class="form__button form__button--save form__button--save-js">
           save
         </button>
       </div>
-    </div>
+    </form>
   </main>
 
   <script src="js/main.js"></script>
