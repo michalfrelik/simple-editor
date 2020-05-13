@@ -17,54 +17,16 @@ if ('serviceWorker' in navigator) {
 // place your code below
 
 
-console.log(`Hello world!`);
+const textarea = document.querySelector('.form__textarea--js');
+const load = document.querySelector('.form__button--load-js');
+const save = document.querySelector('.form__button--save-js');
 
+save.addEventListener('click', (e) => {
+  e.preventDefault();
+  localStorage.setItem('textarea', textarea.value);
+});
 
-const saveButton = document.querySelector('.button__save--js');
-console.log(saveButton);
-
-const loadButton = document.querySelector('.button__load--js');
-console.log(loadButton);
-
-const textarea = document.querySelector('.textarea--js');
-console.log(textarea);
-
-saveButton.addEventListener('click', (e) => {
-  localStorage.getItem('textarea', e.target.value);
-})
-
-
-// const inputTest = document.querySelector('.form__window-js');
-
-// inputTest.addEventListener('keyup', (e) => {
-//   localStorage.setItem('inputTest',e.target.value);
-// });
-
-// if (localStorage.getItem('inputTest')) {
-//   inputTest.value = (localStorage.getItem('inputTest'))
-// };
-
-
-
-// const navigationSwitcher = document.querySelector('.navigation__switcher--js');
-
-// navigationSwitcher.addEventListener('click', (e) => {
-// 	const navigationList = document.querySelector('.navigation__list--js');
-// 	navigationList.classList.toggle('navigation__list--visible');
-// 	navigationSwitcher.innerHTML = 'X';
-// });
-
-
-// const button = document.querySelector('.header__button--js');
-// console.log(button);
-
-// button.addEventListener('click', (e) => {
-// 	const header = document.querySelector('.header__title--js')
-// 	header.innerHTML = '!! Pierwszy button !!';
-// 	header.classList.toggle('header__title--red');
-// 	if (header.classList.contains('header__title--red')) {
-// 		console.log('jest klasa');
-// 	} else {
-// 		console.log('brak klasy');
-// 	}
-// });
+load.addEventListener('click', (e) => {
+  e.preventDefault();
+  textarea.value = localStorage.getItem('textarea');
+});

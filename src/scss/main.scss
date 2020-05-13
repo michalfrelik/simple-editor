@@ -20,62 +20,59 @@ body {
   justify-content: center;
   min-height: 100vh;
   font-family: "Open Sans";
+  background: #FAFAFC;
+}
+
+.main {
+  max-width: 600px;
+  width: 100%;
 }
 
 .header {
-  font-style: normal;
   font-weight: 600;
   font-size: 36px;
   line-height: 40px;
   margin: 0;
+  margin-bottom: 48px;
 }
 
-.label {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  margin: 0;
-}
-
-.textarea {
-  border-radius: 6px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  height: 100%;
-  line-height: 24px;
-  min-width: 464px;
-  min-height: 205px;
-  width: 100%;
-}
-
-.button {
-  background: $violet;
-  border-radius: 4px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  height: 40px;
-  line-height: 16px;
-  margin-left: 64px;
-  padding: 12px 16px;
-  width: 79px;
-  &__layout {
+.form {
+  &__action {
+    margin-top: 48px;
     display: flex;
-    flex-flow: row-reverse;
+    justify-content: space-between;
   }
-  &__text {
-    background: none;
-    border: none;
-    color: $white;
-    font-family: Open Sans;
-    font-style: normal;
+  &__button {
+    background: #fff;
+    border: 1px solid #121232;
+    border-radius: 4px;
+    padding: 16px;
+    min-width: 200px;
     font-weight: 600;
+    letter-spacing: 0.5px;
+    &--save {
+      background: #121232;
+      color: #fff;
+    }
+  }
+  &__label {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+  &__textarea {
+    background: #fff;
+    border: 1px solid #d3d4d8;
+    border-radius: 6px;
     font-size: 14px;
-    line-height: 16px;
-    padding: 0;
+    height: 100%;
+    line-height: 24px;
+    min-width: 40vh;
+    min-height: 30vh;
     width: 100%;
+    padding: 12px;
   }
 }
+
