@@ -17,10 +17,9 @@ body {
   background: $background;
   color: $black;
   display: flex;
+  font-family: "Open Sans";
   justify-content: center;
   min-height: 100vh;
-  font-family: "Open Sans";
-  background: #FAFAFC;
 }
 
 .main {
@@ -38,21 +37,34 @@ body {
 
 .form {
   &__action {
-    margin-top: 48px;
     display: flex;
     justify-content: space-between;
+    margin-top: 48px;
   }
   &__button {
-    background: #fff;
-    border: 1px solid #121232;
+    background: $white;
+    border: 1px solid $violet;
     border-radius: 4px;
-    padding: 16px;
-    min-width: 200px;
     font-weight: 600;
     letter-spacing: 0.5px;
+    min-width: 200px;
+    padding: 16px;
+    &:hover {
+      transform: scale(1.1);
+    }
     &--save {
-      background: #121232;
-      color: #fff;
+      background: $violet;
+      color: $white;
+      &:active {
+        background: $white;
+        color: $black;
+      }
+    }
+    &--load {
+      &:active {
+        background: $violet;
+        color: $white;
+      }
     }
   }
   &__label {
@@ -71,8 +83,7 @@ body {
     line-height: 24px;
     min-width: 40vh;
     min-height: 30vh;
-    width: 100%;
     padding: 12px;
+    width: 100%;
   }
 }
-
