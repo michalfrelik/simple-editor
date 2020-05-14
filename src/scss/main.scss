@@ -40,6 +40,12 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 48px;
+    &--lower {
+      margin-top: 32px;;
+    }
+    &--clear {
+      justify-content: center;
+    }
   }
   &__button {
     background: $white;
@@ -64,6 +70,11 @@ body {
       &:active {
         background: $violet;
         color: $white;
+      }
+    }
+    &--clear {
+      &:active {
+        background: linear-gradient(45deg, $white, $violet);
       }
     }
   }
