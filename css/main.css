@@ -327,15 +327,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "Open Sans";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 100vh;
-  font-family: "Open Sans";
-  background: #FAFAFC; }
+  min-height: 100vh; }
+  @media (max-width: 500px) {
+    body {
+      min-height: 92vh; } }
 
 .main {
   max-width: 600px;
+  margin: 0 20px;
   width: 100%; }
 
 .header {
@@ -344,33 +347,64 @@ body {
   line-height: 40px;
   margin: 0;
   margin-bottom: 48px; }
+  @media (max-width: 500px) {
+    .header {
+      margin-bottom: 36px; } }
 
 .form__action {
-  margin-top: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  margin-top: 48px; }
+  @media (max-width: 500px) {
+    .form__action {
+      margin-top: 36px; } }
+  .form__action--lower {
+    margin-top: 32px; }
+    @media (max-width: 500px) {
+      .form__action--lower {
+        margin-top: 24px; } }
+  .form__action--clear {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
 .form__button {
   background: #fff;
   border: 1px solid #121232;
   border-radius: 4px;
-  padding: 16px;
-  min-width: 200px;
   font-weight: 600;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  min-width: 200px;
+  padding: 16px; }
+  .form__button:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1); }
   .form__button--save {
     background: #121232;
     color: #fff; }
+    .form__button--save:active {
+      background: #fff;
+      color: #000; }
+  .form__button--load:active {
+    background: #121232;
+    color: #fff; }
+  .form__button--clear:active {
+    background: -webkit-linear-gradient(45deg, #fff, #121232);
+    background: -o-linear-gradient(45deg, #fff, #121232);
+    background: linear-gradient(45deg, #fff, #121232); }
+  @media (max-width: 500px) {
+    .form__button {
+      min-width: 100px; } }
 
 .form__label {
   display: block;
   font-weight: 400;
   font-size: 16px;
-  line-height: 32px;
   margin-bottom: 8px; }
 
 .form__textarea {
@@ -382,7 +416,10 @@ body {
   line-height: 24px;
   min-width: 40vh;
   min-height: 30vh;
-  width: 100%;
-  padding: 12px; }
+  padding: 12px;
+  width: 100%; }
+  @media (max-width: 500px) {
+    .form__textarea {
+      min-height: 20vh; } }
 
 /*# sourceMappingURL=main.css.map */
