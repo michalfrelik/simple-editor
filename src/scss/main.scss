@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import "_breakpoints";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,700&display=swap");
 
 html {
@@ -20,10 +21,16 @@ body {
   font-family: "Open Sans";
   justify-content: center;
   min-height: 100vh;
+  @media (max-width: $mobile) {
+    min-height: 92vh;
+  }
+
 }
+
 
 .main {
   max-width: 600px;
+  margin: 0 20px;
   width: 100%;
 }
 
@@ -33,6 +40,9 @@ body {
   line-height: 40px;
   margin: 0;
   margin-bottom: 48px;
+  @media (max-width: $mobile) {
+    margin-bottom: 36px;
+  }
 }
 
 .form {
@@ -40,8 +50,14 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 48px;
+    @media (max-width: $mobile) {
+      margin-top: 36px;
+    }
     &--lower {
       margin-top: 32px;;
+      @media (max-width: $mobile) {
+        margin-top: 24px;
+      }
     }
     &--clear {
       justify-content: center;
@@ -77,12 +93,14 @@ body {
         background: linear-gradient(45deg, $white, $violet);
       }
     }
+    @media (max-width: $mobile) {
+    min-width: 100px;
+    }
   }
   &__label {
     display: block;
     font-weight: 400;
     font-size: 16px;
-    line-height: 32px;
     margin-bottom: 8px;
   }
   &__textarea {
@@ -96,5 +114,8 @@ body {
     min-height: 30vh;
     padding: 12px;
     width: 100%;
+    @media (max-width: $mobile) {
+      min-height: 20vh;
+    }
   }
 }
