@@ -1,6 +1,8 @@
-@import "_normalize";
-@import "_variables";
 @import "_breakpoints";
+@import "_keyframes";
+@import "_normalize";
+@import "_mixin";
+@import "_variables";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,700&display=swap");
 
 html {
@@ -24,9 +26,7 @@ body {
   @media (max-width: $mobile) {
     min-height: 92vh;
   }
-
 }
-
 
 .main {
   max-width: 600px;
@@ -54,7 +54,7 @@ body {
       margin-top: 36px;
     }
     &--lower {
-      margin-top: 32px;;
+      margin-top: 32px;
       @media (max-width: $mobile) {
         margin-top: 24px;
       }
@@ -90,11 +90,11 @@ body {
     }
     &--clear {
       &:active {
-        background: linear-gradient(45deg, $white, $violet);
+        background: linear-gradient(90deg, $white, $violet);
       }
     }
     @media (max-width: $mobile) {
-    min-width: 100px;
+      min-width: 100px;
     }
   }
   &__label {
@@ -120,21 +120,34 @@ body {
   }
 }
 
-.test {
-  animation-name: disappearing;
-  animation-duration: 2s;
-  position: relative;
+.animation {
+  &__clear {
+    animation-name: clear;
+    @include animation;
+  }
+  &__save1 {
+    animation-name: save1;
+    @include animation;
+  }
+  &__save2 {
+    animation-name: save2;
+    @include animation;
+  }
+  &__save3 {
+    animation-name: save3;
+    @include animation;
+  }
+  &__load1 {
+    animation-name: load1;
+    @include animation;
+  }
+  &__load2 {
+    animation-name: load2;
+    @include animation;
+  }
+  &__load3 {
+    animation-name: load3;
+    @include animation;
+  }
 }
 
-@keyframes disappearing {
-  0% {
-    top: 0;
-  }
-  50% {
-    opacity: 0;
-    top: 50px;
-  }
-  100% {
-    top: 0;
-  }
-}
