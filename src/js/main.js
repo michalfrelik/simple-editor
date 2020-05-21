@@ -57,7 +57,9 @@ load3.addEventListener('click', (e) => {
 });
 
 clear.addEventListener('click', (e) => {
+  e.preventDefault();
   localStorage.removeItem('textarea1');
   localStorage.removeItem('textarea2');
   localStorage.removeItem('textarea3');
+  clear.classList.toggle('test');
 })

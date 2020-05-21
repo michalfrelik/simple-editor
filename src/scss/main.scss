@@ -119,3 +119,22 @@ body {
     }
   }
 }
+
+.test {
+  animation-name: disappearing;
+  animation-duration: 2s;
+  position: relative;
+}
+
+@keyframes disappearing {
+  0% {
+    top: 0;
+  }
+  50% {
+    opacity: 0;
+    top: 50px;
+  }
+  100% {
+    top: 0;
+  }
+}
