@@ -121,10 +121,6 @@ body {
 }
 
 .animation {
-  &__clear {
-    animation-name: clear;
-    @include animation;
-  }
   &__save1 {
     animation-name: save1;
     @include animation;
